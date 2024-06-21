@@ -1,0 +1,14 @@
+<div >
+    <input (input)="search($event)">
+    </div>
+  <div  class="container"  style="display: flex; flex-wrap: wrap;  align-items: center; " >
+   <div class="card" style="width: 10rem; margin: 10px; " *ngFor="let objeto of objetos" >
+      <div style="background-color:#E22020;">
+          <div style="font-weight:bold; color: white; text-align: center;">{{objeto.categoria}}</div>
+           </div>
+      <img class="card-img-top" src="{{objeto.fotoObjeto}}" alt="Card image cap">
+      <div class="card-body">
+        <h6 class="card-title">{{objeto.nome}}</h6>
+        <a href="#" class="btn btn-primary">Ver detalhes</a>
+      </div>
+    </div>

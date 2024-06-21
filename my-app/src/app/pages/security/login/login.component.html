@@ -1,0 +1,33 @@
+
+<div class="container d-flex justify-content-center" >
+
+    <div class="col-4">
+        <div class="card shadow round mt-5">
+             <div class="card-header">
+                 <h3 class="text-center">Achados e Perdidos</h3>
+             </div>
+ 
+             <div class="card-body">
+                 <form [formGroup]= "formLogin" >
+                     <div class="mb-3">
+                         <label class="form-label">Email</label>
+                         <input type="email" class="form-control" formControlName="email">
+                         <div class="form-text text-danger" *ngIf="isFormControlInvalid('email')"> Email inválido.</div>
+                     </div>
+                     <div class="mb-3">
+                         <label class="form-label">Senha</label>
+                         <input type="password" class="form-control" formControlName="senha">
+                         <div class="form-text text-danger" *ngIf="isFormControlInvalid('senha')"> A senha deve conter pelo menos 6 caracteres.</div>
+                     </div>
+ 
+                     <button type="button" class="btn btn-primary" [disabled]= "!formLogin.valid" (click)="submitForm()" >
+                         Entrar
+                     </button>
+                 </form>
+             </div>
+ 
+        </div>
+    </div>
+ 
+ </div>
+
