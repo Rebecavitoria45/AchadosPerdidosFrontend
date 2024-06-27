@@ -1,0 +1,67 @@
+<h1>{{btnTitulo}}</h1>
+<form [formGroup]="documentoform" (ngSubmit)="submit()" #formDit="ngForm">
+<input type="hidden" formControlName="idDocumento">
+
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Tipo Documento</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" formControlName="tipoDocumento" id="inputEmail3" placeholder="Tipo Documento">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputPassword3" class="col-sm-2 col-form-label">Numero do Documento</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" formControlName="numeroDocumento"   id="inputPassword3" placeholder="Descrição">
+      </div>
+    </div>
+    <div class="form-group row">
+        <label for="inputEstado">Estado</label>
+        <div class= "col-sm-10">
+        <select id="inputEstado" formControlName="estadoDocumento"  class="form-control">
+          <option selected>Escolher...</option>
+          <option value="Acre">Acre</option>
+          <option value="Alagoas">Alagoas</option>
+          <option value="Amapá">Amapá</option>
+          <option value="Amazonas">Amazonas</option>
+          <option value="Bahia">Bahia</option>
+          <option value="Ceará">Ceará</option>
+          <option value="DistritoFederal">Distrito Federal</option>
+          <option value="EspíritoSanto">Espírito Santo</option>
+          <option value="Goiás">Goiás</option>
+          <option value="Maranhão">Maranhão</option>
+          <option value="MatoGrosso">Mato Grosso</option>
+          <option value="MatoGrossodoSul">Mato Grosso do Sul</option>
+          <option value="MinasGerais">Minas Gerais</option>
+          <option value="Pará">Pará</option>
+          <option value="Paraíba">Paraíba</option>
+          <option value="Paraná">Paraná</option>
+          <option value="Pernambuco">Pernambuco</option>
+          <option value="Piauí">Piauí</option>
+          <option value="RiodeJaneiro">Rio de Janeiro</option>
+          <option value="RioGrandedoNorte">Rio Grande do Norte</option>
+          <option value="RioGrandedoSul">Rio Grande do Sul</option>
+          <option value="Rondônia">Rondônia</option>
+          <option value="Roraima">Roraima</option>
+          <option value="SantaCatarina">Santa Catarina</option>
+          <option value="SãoPaulo">São Paulo</option>
+          <option value="Sergipe">Sergipe</option>
+          <option value="Tocantins">Tocantins</option>
+         </select>
+    </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">Nome completo no documento</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" formControlName="nomeCompletoDocumento"    id="inputEmail3" placeholder="Nome completo">
+        </div>
+      </div>
+      
+      
+     
+    <div class="form-group row">
+      <div class="col-sm-10">
+        <button type="submit" class="btn btn-primary" [disabled]="!documentoform.valid">{{btnAcao}}</button>
+      </div>
+    </div>
+    
+  </form>

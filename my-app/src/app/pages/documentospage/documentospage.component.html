@@ -1,0 +1,16 @@
+<div >
+    <input (input)="search($event)">
+</div>
+<div class="container" style="display: flex; flex-wrap: wrap;  align-items: center;">
+  <div class="card" style="width: 18rem;" *ngFor="let documento of documentos">
+    <div style="background-color:#E22020;">
+        <div style="font-weight:bold; color: white; text-align: center;">Achei</div>
+         </div>
+    <div class="card-body">
+      <h5 class="card-title">{{documento.nomeCompletoDocumento}}</h5>
+      <p class="card-text">{{documento.tipoDocumento}}</p>
+      <p class="card-text">{{documento.estadoDocumento}}</p>
+      <a href="#" class="btn btn-primary">ver detalhes</a>
+    </div>
+   </div>
+</div>

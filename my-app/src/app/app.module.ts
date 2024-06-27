@@ -17,6 +17,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { MeusitensComponent } from './pages/meusitens/meusitens.component';
 import { LoginGuard } from './pages/security/login.guard';
+import { EditarobjetosComponent } from './pages/editarobjetos/editarobjetos.component';
+
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { ExcluirObjetosComponent } from './components/excluir-objetos/excluir-objetos.component';
+import { DocumentospageComponent } from './pages/documentospage/documentospage.component';
+import { FormularioDocumentoComponent } from './components/formulario-documento/formulario-documento.component';
+import { CadastroDocumentoComponent } from './pages/cadastro-documento/cadastro-documento.component';
+import { EditardocumentosComponent } from './pages/editardocumentos/editardocumentos.component';
+import { ExcluirdocumentosComponent } from './components/excluirdocumentos/excluirdocumentos.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +36,15 @@ import { LoginGuard } from './pages/security/login.guard';
     FormularioObjetoComponent,
     CadastroObjetoComponent,
     LoginComponent,
-    MeusitensComponent
+    MeusitensComponent,
+    EditarobjetosComponent,
+    ExcluirObjetosComponent,
+    DocumentospageComponent,
+    FormularioDocumentoComponent,
+    CadastroDocumentoComponent,
+    EditardocumentosComponent,
+    ExcluirdocumentosComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -41,6 +58,7 @@ import { LoginGuard } from './pages/security/login.guard';
   providers: [
     provideClientHydration(),
     LoginGuard,
+    provideAnimationsAsync('noop'),
   ],
   bootstrap: [AppComponent]
 })

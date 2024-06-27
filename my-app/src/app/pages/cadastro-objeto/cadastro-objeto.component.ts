@@ -8,6 +8,9 @@ import { Objeto } from '../../models/Objetos';
   styleUrl: './cadastro-objeto.component.css'
 })
 export class CadastroObjetoComponent {
+
+  btnAcao = "Cadastrar"
+  btnTitulo = "Cadastrar Objeto"
   constructor(private objetoService : ObjetosService, private router: Router) {
   
   

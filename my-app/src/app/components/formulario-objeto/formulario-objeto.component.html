@@ -1,4 +1,7 @@
+<h1>{{btnTitulo}}</h1>
 <form [formGroup]="objetoform" (ngSubmit)="submit()" #formDit="ngForm">
+<input type="hidden" formControlName="idObjeto">
+
     <div class="form-group row">
       <label for="inputEmail3" class="col-sm-2 col-form-label">Nome do objeto</label>
       <div class="col-sm-10">
@@ -32,7 +35,7 @@
      
     <div class="form-group row">
       <div class="col-sm-10">
-        <button type="submit" class="btn btn-primary" >Cadastrar</button>
+        <button type="submit" class="btn btn-primary" [disabled]="!objetoform.valid">{{btnAcao}}</button>
       </div>
     </div>
     
