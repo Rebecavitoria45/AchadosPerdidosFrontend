@@ -3,7 +3,7 @@
     <svg xmlns="http://www.w3.org/2000/svg"   class="search-icon"   width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
       <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
     </svg>
-    <input type="text" id="search-input" class="search-input" placeholder="Pesquise" (input)="search($event)">
+    <input type="text" id="search-input" class="search-input" placeholder="Pesquisar" (input)="search($event)">
     </div>
   <div  class="container"  style="display: flex; flex-wrap: wrap;  align-items: center; " >
    <div class="card" style="width: 10rem; margin: 10px; " *ngFor="let objeto of objetos" >
@@ -13,7 +13,7 @@
       <img class="card-img-top" src="{{objeto.fotoObjeto}}" alt="Card image cap">
       <div class="card-body">
         <h6 class="card-title">{{objeto.nome}}</h6>
-        <a href="#" class="btn btn-primary">Ver detalhes</a>
+        <a class="btn btn-primary"  style="color: white;" (click)="openDialogobjetos(objeto.idObjeto)">Ver detalhes</a>
       </div>
     </div>
 

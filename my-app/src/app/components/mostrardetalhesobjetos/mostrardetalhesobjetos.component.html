@@ -1,0 +1,13 @@
+<h1 mat-dialog-title class="modal-title">{{ objeto.nome}}</h1>
+<div mat-dialog-content class="modal-content">
+  <div class="img-container">
+    <img src="{{ objeto.fotoObjeto }}" class="img-fluid" alt="{{ objeto.nome }}" />
+  </div>
+  <div class="description">
+    <p><strong>Descrição:</strong> {{ objeto.descricao }}</p>
+    <p><strong>Categoria:</strong> {{ objeto.categoria }}</p>
+  </div>
+</div>
+<div mat-dialog-actions class="modal-actions">
+  <button  class="btn btn-info"  (click)="onClose()">Voltar</button>
+</div>

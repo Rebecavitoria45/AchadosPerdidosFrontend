@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Objeto } from '../../models/Objetos';
 import { ObjetosService } from '../../services/objetos.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-editarobjetos',
@@ -13,7 +14,7 @@ btnAcao: string = 'Editar';
 btnTitulo : string = 'Editar Objeto';
 objeto! : Objeto;
 
-constructor(private objetoService: ObjetosService, private route: ActivatedRoute, private router: Router) {
+constructor(private objetoService: ObjetosService, private route: ActivatedRoute, private router: Router,private toastr:ToastrService) {
  
   
 }
@@ -30,6 +31,7 @@ ngOnInit(): void {
 editarObjeto(objeto : Objeto){
   const id = Number(this.route.snapshot.paramMap.get('id'));
  this.objetoService.EditarObjeto(objeto,id).subscribe((data)=>{
+  this.toastr.success("Atualizado com sucesso");
   this.router.navigate(['/meusitens']);
  })
 

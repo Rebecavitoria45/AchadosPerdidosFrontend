@@ -34,4 +34,6 @@ export class FormularioObjetoComponent implements OnInit{
  this.onSubmit.emit(this.objetoform.value);
 
   }
+
+  
 }

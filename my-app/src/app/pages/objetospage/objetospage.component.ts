@@ -1,6 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Objeto } from '../../models/Objetos';
 import { ObjetosService } from '../../services/objetos.service';
+import { MostrardetalhesobjetosComponent } from '../../components/mostrardetalhesobjetos/mostrardetalhesobjetos.component';
+import {
+  MatDialog,
+  MatDialogActions,
+  MatDialogClose,
+  MatDialogContent,
+  MatDialogRef,
+  MatDialogTitle,
+} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-objetospage',
@@ -11,7 +20,7 @@ export class ObjetospageComponent {
   objetos: Objeto[] = [];
     objetosGeral : Objeto[]= [];
 
-  constructor(private ObjetoService: ObjetosService){}
+  constructor(private ObjetoService: ObjetosService,public dialog:MatDialog){}
   ngOnInit(): void {
     this.ObjetoService.GetObjetos().subscribe(data =>{
      const dados = data.dados;
@@ -34,5 +43,13 @@ export class ObjetospageComponent {
 
     )
   }
-
+  openDialogobjetos(id?: number){
+    this.dialog.open(MostrardetalhesobjetosComponent, {
+      width: '500px',
+      height: '450px',
+      data: {
+        id : id
+      }
+  });
+ }
 }

@@ -37,4 +37,9 @@
     margin: -0.75rem -1.25rem -0.75rem auto;
     cursor: pointer;
   }
+
+  .modal-content{
+    border: none;
+  }
+  
   

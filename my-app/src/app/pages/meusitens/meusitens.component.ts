@@ -14,6 +14,7 @@ import {
 import { DocumentosService } from '../../services/documentos.service';
 import { Documento } from '../../models/Documentos';
 import { ExcluirdocumentosComponent } from '../../components/excluirdocumentos/excluirdocumentos.component';
+import { MostrardetalhesobjetosComponent } from '../../components/mostrardetalhesobjetos/mostrardetalhesobjetos.component';
 @Component({
   selector: 'app-meusitens',
   templateUrl: './meusitens.component.html',
@@ -81,5 +82,14 @@ openDialogodocumento(id?: number){
     
   });
 }
-}
 
+openDialog(id?: number){
+  this.dialog.open(MostrardetalhesobjetosComponent, {
+    width: '500px',
+    height: '450px',
+    data: {
+      id : id
+    }
+});
+}
+}

@@ -1,3 +1,8 @@
 nav{
     background-color: #9acae1;
 }
+.navbar-nav .nav-link.active {
+  
+    color: #070707; /* Altere essa cor conforme necessário */
+  }
+  
