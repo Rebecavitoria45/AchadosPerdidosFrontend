@@ -1,0 +1,40 @@
+.custom-modal-size {
+    max-width: 250px; /* Ajuste a largura máxima para um tamanho menor */
+    margin: auto; /* Centraliza o modal horizontalmente */
+  }
+  
+  .modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .modal-body {
+    padding: 1rem;
+  }
+  
+  .modal-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-top: 1px solid #dee2e6;
+  }
+  
+  .modal-footer .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+  
+  .modal-footer .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+  }
+  
+  .close {
+    padding: 0.75rem 1.25rem;
+    margin: -0.75rem -1.25rem -0.75rem auto;
+    cursor: pointer;
+  }
+  

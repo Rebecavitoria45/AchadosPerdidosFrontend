@@ -26,5 +26,7 @@ excluir(){
    window.location.reload();
  })
 }
-
+onClose(): void {
+  this.ref.close();
+ }
 }

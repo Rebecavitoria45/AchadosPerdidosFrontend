@@ -28,6 +28,8 @@ export class EditardocumentosComponent implements OnInit {
     const id = Number(this.route.snapshot.paramMap.get('id'));
    this.documentoService.EditarDocumento(documento,id).subscribe((data)=>{
     this.router.navigate(['/meusitens']);
+    
+
    })
   
   }

@@ -63,8 +63,8 @@ loadDocumentos(): void {
 
 openDialogobjetos(id?: number){
   this.dialog.open(ExcluirObjetosComponent, {
-    width: '250px',
-    height: '350px',
+    width: '230px',
+    height: '250px',
     data: {
       id : id
     }
@@ -73,8 +73,8 @@ openDialogobjetos(id?: number){
 }
 openDialogodocumento(id?: number){
   this.dialog.open(ExcluirdocumentosComponent, {
-    width: '250px',
-    height: '350px',
+    width: '230px',
+    height: '250px',
     data: {
       id : id
     }

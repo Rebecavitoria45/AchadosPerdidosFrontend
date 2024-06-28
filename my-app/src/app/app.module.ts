@@ -26,6 +26,7 @@ import { FormularioDocumentoComponent } from './components/formulario-documento/
 import { CadastroDocumentoComponent } from './pages/cadastro-documento/cadastro-documento.component';
 import { EditardocumentosComponent } from './pages/editardocumentos/editardocumentos.component';
 import { ExcluirdocumentosComponent } from './components/excluirdocumentos/excluirdocumentos.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,6 +45,7 @@ import { ExcluirdocumentosComponent } from './components/excluirdocumentos/exclu
     CadastroDocumentoComponent,
     EditardocumentosComponent,
     ExcluirdocumentosComponent,
+   
    
   ],
   imports: [

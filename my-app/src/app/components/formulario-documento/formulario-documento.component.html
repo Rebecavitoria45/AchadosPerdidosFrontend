@@ -1,24 +1,25 @@
-<h1>{{btnTitulo}}</h1>
-<form [formGroup]="documentoform" (ngSubmit)="submit()" #formDit="ngForm">
-<input type="hidden" formControlName="idDocumento">
+<div class="mt-5">
+  <h1 class="text-center">{{btnTitulo}}</h1>
+</div>
+<div class="d-flex justify-content-center mt-5">
+  <form [formGroup]="documentoform" (ngSubmit)="submit()" #formDit="ngForm" class="w-50">
+    <input type="hidden" formControlName="idDocumento">
 
-    <div class="form-group row">
-      <label for="inputEmail3" class="col-sm-2 col-form-label">Tipo Documento</label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" formControlName="tipoDocumento" id="inputEmail3" placeholder="Tipo Documento">
-      </div>
+    <div class="form-group">
+      <label for="tipoDocumento">Tipo Documento</label>
+      <input type="text" class="form-control" formControlName="tipoDocumento" id="tipoDocumento" placeholder="Exemplo: CPF">
     </div>
-    <div class="form-group row">
-      <label for="inputPassword3" class="col-sm-2 col-form-label">Numero do Documento</label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" formControlName="numeroDocumento"   id="inputPassword3" placeholder="Descrição">
-      </div>
+
+    <div class="form-group">
+      <label for="numeroDocumento">Número do Documento</label>
+      <input type="text" class="form-control" formControlName="numeroDocumento" id="numeroDocumento" >
     </div>
-    <div class="form-group row">
-        <label for="inputEstado">Estado</label>
-        <div class= "col-sm-10">
-        <select id="inputEstado" formControlName="estadoDocumento"  class="form-control">
-          <option selected>Escolher...</option>
+
+    <div class="form-group">
+      <label for="estadoDocumento">Estado</label>
+      <select id="estadoDocumento" formControlName="estadoDocumento" class="form-control">
+        <option selected>Escolher...</option>
+        <option selected>Escolher...</option>
           <option value="Acre">Acre</option>
           <option value="Alagoas">Alagoas</option>
           <option value="Amapá">Amapá</option>
@@ -46,22 +47,14 @@
           <option value="SãoPaulo">São Paulo</option>
           <option value="Sergipe">Sergipe</option>
           <option value="Tocantins">Tocantins</option>
-         </select>
+      </select>
     </div>
-      </div>
-      <div class="form-group row">
-        <label for="inputEmail3" class="col-sm-2 col-form-label">Nome completo no documento</label>
-        <div class="col-sm-10">
-          <input type="text" class="form-control" formControlName="nomeCompletoDocumento"    id="inputEmail3" placeholder="Nome completo">
-        </div>
-      </div>
-      
-      
-     
-    <div class="form-group row">
-      <div class="col-sm-10">
-        <button type="submit" class="btn btn-primary" [disabled]="!documentoform.valid">{{btnAcao}}</button>
-      </div>
+
+    <div class="form-group">
+      <label for="nomeCompletoDocumento">Nome completo no documento</label>
+      <input type="text" class="form-control" formControlName="nomeCompletoDocumento" id="nomeCompletoDocumento" >
     </div>
-    
+
+    <button type="submit" class="btn btn-primary btn-block" [disabled]="!documentoform.valid">{{btnAcao}}</button>
   </form>
+</div>

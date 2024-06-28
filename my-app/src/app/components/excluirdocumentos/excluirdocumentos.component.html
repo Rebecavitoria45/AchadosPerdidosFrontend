@@ -1,7 +1,17 @@
-<div *ngIf="documento">
-    <h2 mat-dialog-title>Excluir</h2>
-    <div>
-      Deseja deletar este documento
+<div *ngIf="documento" class="modal-dialog custom-modal-size">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title">Excluir</h5>
+      <button type="button" class="close" (click)="onClose()" >
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
-    <button (click)="excluir()">confirmar</button>
+    <div class="modal-body">
+      Deseja excluir este Documento?
     </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" (click)="onClose()">Cancelar</button>
+      <button type="button" class="btn btn-danger" (click)="excluir()">Confirmar</button>
+    </div>
+  </div>
+</div>

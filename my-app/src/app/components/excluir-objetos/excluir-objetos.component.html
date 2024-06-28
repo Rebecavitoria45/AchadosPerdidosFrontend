@@ -1,7 +1,22 @@
-<div *ngIf="objeto">
-<h2 mat-dialog-title>Excluir</h2>
-<div>
- Deseja excluir este Objeto?
+
+
+<!-- Modal de Exclusão -->
+<div *ngIf="objeto" class="modal-dialog custom-modal-size">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title">Excluir</h5>
+      <button type="button" class="close" (click)="onClose()" >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      Deseja excluir este Objeto?
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" (click)="onClose()">Cancelar</button>
+      <button type="button" class="btn btn-danger" (click)="excluir()">Confirmar</button>
+    </div>
+  </div>
 </div>
-<button (click)="excluir()">confirmar</button>
-</div>
+
+

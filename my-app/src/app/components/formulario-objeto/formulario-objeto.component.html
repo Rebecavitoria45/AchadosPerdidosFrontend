@@ -1,43 +1,34 @@
-<h1>{{btnTitulo}}</h1>
-<form [formGroup]="objetoform" (ngSubmit)="submit()" #formDit="ngForm">
-<input type="hidden" formControlName="idObjeto">
+<div class="mt-5">
+  <h1 class="text-center">{{btnTitulo}}</h1>
+</div>
+<div class="d-flex justify-content-center mt-5">
+  <form [formGroup]="objetoform" (ngSubmit)="submit()" #formDit="ngForm" class="w-50">
+    <input type="hidden" formControlName="idObjeto">
 
-    <div class="form-group row">
-      <label for="inputEmail3" class="col-sm-2 col-form-label">Nome do objeto</label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" formControlName="Nome" id="inputEmail3" placeholder="Nome">
-      </div>
+    <div class="form-group">
+      <label for="nomeObjeto">Nome do objeto</label>
+      <input type="text" class="form-control" formControlName="Nome" id="nomeObjeto" placeholder="Nome">
     </div>
-    <div class="form-group row">
-      <label for="inputPassword3" class="col-sm-2 col-form-label">Descrição</label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" formControlName="Descricao"   id="inputPassword3" placeholder="Descrição">
-      </div>
+
+    <div class="form-group">
+      <label for="descricaoObjeto">Descrição</label>
+      <textarea class="form-control" formControlName="Descricao" id="descricaoObjeto" placeholder="Descreva o local e data que você encontrou ou perdeu o objeto" rows="4"></textarea>
     </div>
-    <div class="form-group row">
-        <label for="inputEstado">Categoria</label>
-        <div class= "col-sm-10">
-        <select id="inputEstado" formControlName="Categoria"  class="form-control">
-          <option selected>Escolher...</option>
-          <option value="Perdido">Perdido</option>
-          <option value="Achei">Achado</option>
-         </select>
+
+    <div class="form-group">
+      <label for="categoriaObjeto">Categoria</label>
+      <select id="categoriaObjeto" formControlName="Categoria" class="form-control">
+        <option selected>Escolher...</option>
+        <option value="Perdido">Perdido</option>
+        <option value="Achei">Achado</option>
+      </select>
     </div>
-      </div>
-      <div class="form-group row">
-        <label for="inputEmail3" class="col-sm-2 col-form-label">Link da Foto do Objeto</label>
-        <div class="col-sm-10">
-          <input type="text" class="form-control" formControlName="FotoObjeto"    id="inputEmail3" placeholder="Link da foto">
-        </div>
-      </div>
-      
-      
-     
-    <div class="form-group row">
-      <div class="col-sm-10">
-        <button type="submit" class="btn btn-primary" [disabled]="!objetoform.valid">{{btnAcao}}</button>
-      </div>
+
+    <div class="form-group">
+      <label for="fotoObjeto">Link da Foto do Objeto</label>
+      <input type="text" class="form-control" formControlName="FotoObjeto" id="fotoObjeto" >
     </div>
-    
+
+    <button type="submit" class="btn btn-primary btn-block" [disabled]="!objetoform.valid">{{btnAcao}}</button>
   </form>
-
+</div>

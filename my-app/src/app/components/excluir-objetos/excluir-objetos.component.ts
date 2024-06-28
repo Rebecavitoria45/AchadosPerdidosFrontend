@@ -29,5 +29,8 @@ export class ExcluirObjetosComponent implements OnInit{
       window.location.reload();
     })
    }
+   onClose(): void {
+    this.ref.close();
+   }
    
 }
