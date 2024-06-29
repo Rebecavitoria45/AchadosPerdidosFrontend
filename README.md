@@ -22,9 +22,24 @@
 <p> Permite Cadastrar, Listar, Excluir e editar Documentos, além de buscar documentos cadastrados por um usuário. </p>
 
 ## Telas
-............... projeto em andamento
+### Tela inicial
+![image](https://github.com/Rebecavitoria45/AchadosPerdidosFrontend/assets/117654851/c017f7f9-3e49-418e-a02d-f1145d307315)
+
+### Tela de objetos
+![image](https://github.com/Rebecavitoria45/AchadosPerdidosFrontend/assets/117654851/c5a536fa-fae5-4faf-a43f-ef8de1130871)
+
+### Tela meus itens cadastrados 
+![image](https://github.com/Rebecavitoria45/AchadosPerdidosFrontend/assets/117654851/1e56ec84-57c4-4fd5-8989-84e4d8b2f515)
+
+
 ## Instalação
- .................. projeto em andamento
+ 1. Clone o Repositório  `git clone https://github.com/Rebecavitoria45/AchadosPerdidosFrontend`
+ 2. Navegue até o diretório do projeto: cd AchadosPerdidosFrontend/my-app
+ 3. Instale as dependências: npm install
+ 4. Inicie o servidor de desenvolvimento: `ng serve`
+ 5. Acesse o projeto em `http://localhost:4200`
+ 6. Para fazer login na aplicação utilize o email: joao@gmail.com  senha:joao1 ou email:rebeca@gmail.com senha:123456
+    
 ## Contato
    ### Autora: Rebeca vitória
    ### Email: bebecavitoria4738@gmail.com
